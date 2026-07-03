@@ -1,0 +1,43 @@
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+
+# Logs
+logs/*
+!logs/.gitkeep
+*.log
+
+# Local data
+data/raw/*
+data/processed/*
+data/rejected/*
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/rejected/.gitkeep
+
+# Backups
+backups/
+*.dump
+*.sql
+
+# Local and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Docker local overrides
+docker-compose.override.yml

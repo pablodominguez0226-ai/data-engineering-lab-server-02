@@ -1,0 +1,72 @@
+name: data_lab_server_02
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: data_lab_server_02_postgres
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    ports:
+      - "${HOST_BIND_ADDRESS:-127.0.0.1}:${POSTGRES_HOST_PORT:-5433}:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U \"$${POSTGRES_USER}\" -d \"$${POSTGRES_DB}\""]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+    networks:
+      - data_lab_server_02_network
+
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: data_lab_server_02_pgadmin
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD}
+    ports:
+      - "${HOST_BIND_ADDRESS:-127.0.0.1}:${PGADMIN_HOST_PORT:-5150}:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - data_lab_server_02_network
+
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: data_lab_server_02_api
+    restart: unless-stopped
+    env_file:
+      - .env
+    command: uvicorn api.main:app --host ${API_HOST:-0.0.0.0} --port ${API_PORT:-8000}
+    ports:
+      - "${HOST_BIND_ADDRESS:-127.0.0.1}:${API_HOST_PORT:-8100}:${API_PORT:-8000}"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - data_lab_server_02_network
+
+networks:
+  data_lab_server_02_network:
+    name: data_lab_server_02_network
+    driver: bridge
+
+volumes:
+  postgres_data:
+    name: data_lab_server_02_postgres_data
+  pgadmin_data:
+    name: data_lab_server_02_pgadmin_data

@@ -1,0 +1,17 @@
+.env
+.env.*
+!.env.example
+.git
+.pytest_cache
+.mypy_cache
+.ruff_cache
+__pycache__
+*.py[cod]
+logs/*
+data/raw/*
+data/processed/*
+data/rejected/*
+backups/
+*.dump
+*.sql
+docker-compose.override.yml
