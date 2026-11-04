@@ -1,14 +1,60 @@
-# Pablo Gabriel Dominguez - Curriculum Vitae
-- **Rol**: Software Architect & Distributed Systems Engineer
-- **Ubicación**: Mendoza, Argentina | Remoto
-- **GitHub**: https://github.com/pablodominguez0226-ai
-- **LinkedIn**: https://www.linkedin.com/in/pablo-dominguez-460a811a1/
+# Pablo Gabriel Dominguez
+**Systems Engineer & Quantitative Data Architect**
+*Mendoza, Argentina | Remoto / Híbrido*
+- GitHub: https://github.com/pablodominguez0226-ai
+- LinkedIn: https://www.linkedin.com/in/pablo-dominguez-460a811a1/
+- Email: pablodominguez0226@gmail.com
 
-## Stack Técnico de Producción
-- **Lenguajes**: Python 3.12 (Asyncio, Aiohttp, Pandas), JavaScript, TypeScript, SQL
-- **Infraestructura**: Linux (Ubuntu x86_64), Systemd, Docker, Git, SQLite
-- **Enfoque**: Arquitectura de software orientada a eventos, bots de ejecución, análisis microestructural.
+---
+### 🛠 Stack Tecnológico Activo (Verificado por Telemetría)
+`Git, HTML, JavaScript, Linux (Ubuntu), Python, Python 3.12, SQLite, Systemd, TypeScript`
 
-## Proyectos Destacados
-1. **Automated Trading & ETL Engine**: Loop asíncrono de ejecución en 15s con balanceo de riesgo.
-2. **Career Hunter Bot Squad**: Orquestación multi-agente con persistencia SQLite y monitor 3D.
+---
+### 💼 Sistemas y Repositorios en Producción
+*Generado y validado automáticamente por GitSync Agent: 2026-11-04 14:56 ART*
+
+### 📦 [pablodominguez0226-ai](https://github.com/pablodominguez0226-ai/pablodominguez0226-ai)
+- **Descripción**: Sistema distribuido de procesamiento y arquitectura técnica.
+- **Stack principal**: Python / Shell
+- **Última actividad**: 2026-11-04
+
+### 📦 [Aulaconomy](https://github.com/pablodominguez0226-ai/Aulaconomy)
+- **Descripción**: Sistema distribuido de procesamiento y arquitectura técnica.
+- **Stack principal**: TypeScript
+- **Última actividad**: 2026-11-02
+
+### 📦 [FitTracker](https://github.com/pablodominguez0226-ai/FitTracker)
+- **Descripción**: Sistema distribuido de procesamiento y arquitectura técnica.
+- **Stack principal**: JavaScript
+- **Última actividad**: 2026-11-02
+
+### 📦 [data-engineering-lab-server-02](https://github.com/pablodominguez0226-ai/data-engineering-lab-server-02)
+- **Descripción**: Sistema distribuido de procesamiento y arquitectura técnica.
+- **Stack principal**: Python
+- **Última actividad**: 2026-11-02
+
+### 📦 [pablodominguez0226-ai.github.io](https://github.com/pablodominguez0226-ai/pablodominguez0226-ai.github.io)
+- **Descripción**: Sistema distribuido de procesamiento y arquitectura técnica.
+- **Stack principal**: JavaScript
+- **Última actividad**: 2026-10-12
+
+### 📦 [casino-core](https://github.com/pablodominguez0226-ai/casino-core)
+- **Descripción**: Sistema distribuido de procesamiento y arquitectura técnica.
+- **Stack principal**: Python
+- **Última actividad**: 2026-10-12
+
+### 📦 [konta-app](https://github.com/pablodominguez0226-ai/konta-app)
+- **Descripción**: Sistema distribuido de procesamiento y arquitectura técnica.
+- **Stack principal**: HTML
+- **Última actividad**: 2026-10-12
+
+### 📦 [LifeFlow](https://github.com/pablodominguez0226-ai/LifeFlow)
+- **Descripción**: Sistema distribuido de procesamiento y arquitectura técnica.
+- **Stack principal**: TypeScript
+- **Última actividad**: 2026-10-02
+
+---
+### 🎯 Métricas Operativas de Arquitectura
+- Procesamiento en streaming asíncrono con `asyncio` y sockets directos.
+- Persistencia transaccional ACID en SQLite con replicación de estados.
+- Despliegue de daemons bajo Systemd con tolerancia a fallos 24/7.
